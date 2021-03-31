@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="d-flex justify-content-md-center align-items-center vh-100">
+        <form #myForm="ngForm" (ngSubmit)="onSubmit()" class="w-50">
+          <div class="form-group">
+            <label for="number">Tipp</label>
+            <input type="number" class="form-control mt-3 mb-3" id="number" name="number" [(ngModel)]="number" required
+                   placeholder="Gondolj egy számra 1 és 100 között">
+          </div>
+          <div *ngIf="lower" class="alert alert-danger" role="alert">
+            A szám kissebb a megadottnál.
+          </div>
+          <div *ngIf="greater" class="alert alert-danger" role="alert">
+            A szám nagyobb a megadottnál.
+          </div>
+          <div *ngIf="equal" class="alert alert-info" role="alert">
+            Eltaláltad!
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Küldés</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
