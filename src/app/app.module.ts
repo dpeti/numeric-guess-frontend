@@ -7,6 +7,7 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { HomeComponent } from './component/home/home.component';
 import { GameComponent } from './component/game/game.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
